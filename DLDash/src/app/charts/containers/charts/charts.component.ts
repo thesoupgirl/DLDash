@@ -20,6 +20,8 @@ export class ChartsComponent implements OnInit, OnDestroy {
   dataset: any[] = [{ data: [], label: ''}];
   labels: any[] = [];
 
+  subjects: any[] = ["Math", "Science", "Computing", "Personal Development", "Humanities", "Languages", "Art"];
+
   barChartDataset: any[] = [{ data: [], label: '' }];
   barChartLabels: any[] = [];
   barChartDate: string;
@@ -34,7 +36,7 @@ export class ChartsComponent implements OnInit, OnDestroy {
 
     this.lineChartSub = this.store.select(getLineChartData).subscribe( (data: any) => {
       if (data.values) {
-        this.dataset = [{ data: data.values, label: `${data.currencyName} exchange rates (base EUR)`}];
+        this.dataset = [{ data: data.values, label: `${this.subjects[0]}`}];
         this.labels = data.labels;
       } else {
         this.getExchangeRates('USD');
@@ -43,8 +45,8 @@ export class ChartsComponent implements OnInit, OnDestroy {
 
     this.barChartSub = this.store.select(getBarChartData).subscribe( (data: any) => {
       if (data.values) {
-        this.barChartDataset = [{ data: data.values, label: `${data.date} exchange rates (base ${data.base})`}];
-        this.barChartLabels = data.labels;
+        this.barChartDataset = [{ data: data.values, label: `${this.subjects[0]}`}];
+        this.barChartLabels = this.subjects;
       } else {
         this.getLatestExchangeRates();
       }

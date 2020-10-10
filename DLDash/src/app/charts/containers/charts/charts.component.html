@@ -1,6 +1,6 @@
 <div class="white px-4 section-header">
-  <h3>Charts</h3>
-  <p class="grey-text pt-3">Visualisation of data downloaded from an external API</p>
+  <h3>Analytics</h3>
+  <p class="grey-text pt-3">Visualisation of completed and in progress coursework</p>
 </div>
 
 <div *ngIf="isLoading$ | async" class="d-flex justify-content-center align-items-center" style="margin-top: 300px">
@@ -16,11 +16,13 @@
       <mdb-card>
         <mdb-card-body>
           <div class="pl-4">
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('USD')">USD</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('PLN')">PLN</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('GBP')">GBP</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('JPY')">JPY</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('RUB')">RUB</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('USD')">Math</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('PLN')">Science</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('GBP')">Computing</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('JPY')">Art</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('RUB')">Humanities</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('PLN')">Languages</button>
+            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('RUB')">Personal Development</button>
           </div>
           <app-line-chart [dataset]="dataset" [labels]="labels"></app-line-chart>
         </mdb-card-body>
@@ -33,8 +35,8 @@
       <table class="white text-center z-depth-1" mdbTable>
         <thead class="primary-color text-white">
           <tr>
-            <th>Value</th>
-            <th>Label</th>
+            <th>Completed</th>
+            <th>Subject</th>
           </tr>
         </thead>
         <tbody>
@@ -64,13 +66,6 @@
       </mdb-card>
     </div>
 
-    <div class="col-md-6 mb-3">
-      <mdb-card>
-        <mdb-card-body>
-          <app-doughnut-chart [dataset]="barChartDataset" [labels]="barChartLabels"></app-doughnut-chart>
-        </mdb-card-body>
-      </mdb-card>
-    </div>
-  </div>
+
 
 </div>
