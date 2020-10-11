@@ -17,6 +17,7 @@ export class ProjectModalComponent implements OnInit {
   title: string;
   description: string;
   photoUrl: string;
+  status: string;
 
   projectData: Subject<Project> = new Subject();
   project: Project = {};

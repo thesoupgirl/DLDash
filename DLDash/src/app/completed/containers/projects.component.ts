@@ -35,6 +35,17 @@ export class ProjectsComponent implements OnInit {
         if (this.user && !projects) {
           this.store.dispatch(new fromProjects.ProjectsQuery());
         }
+        var count = 0;
+        console.log(projects)
+        /**
+        for (let proj of projects) {
+          if(proj.status != 'Completed') {
+            console.log(proj)
+            projects.splice(count, 1)
+          }
+          count++;
+        }
+        */
         return projects;
       })
     );
@@ -59,6 +70,7 @@ export class ProjectsComponent implements OnInit {
 
     this.modalRef.content.heading = 'Edit completed learning module';
     const projectCopy = {...project };
+    projectCopy.status = 'Completed';
     this.modalRef.content.project = projectCopy;
 
     this.modalRef.content.projectData.pipe(take(1)).subscribe( (projectData: Project) => {

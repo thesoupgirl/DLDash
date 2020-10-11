@@ -34,7 +34,8 @@ export class ProjectsEffects {
               key: key || null,
               title: project.title || null,
               description: project.description || null,
-              photoUrl: project.photoUrl || null
+              photoUrl: project.photoUrl || null,
+              status: project.status || null
             };
           });
           return (new fromProjects.ProjectsLoaded({ projects: projectsData }));

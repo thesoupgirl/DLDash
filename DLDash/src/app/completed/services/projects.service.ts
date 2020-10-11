@@ -21,12 +21,14 @@ export class ProjectsService {
 
   add(project: Project, userId: string) {
     const projects = this.db.list(`projects/${userId}`);
+    //project.status = 'Completed';
     return projects.push(project);
   }
 
   addProjects(projects: Project[]) {
     const userId = this.userId;
     projects.forEach( (project: Project) => {
+      //project.status = 'Completed';
       this.db.list(`projects/${userId}`).push(project);
     });
   }
