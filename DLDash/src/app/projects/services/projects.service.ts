@@ -40,7 +40,8 @@ export class ProjectsService {
       .update({
         title: project.title,
         description: project.description,
-        photoUrl: project.photoUrl
+        photoUrl: project.photoUrl,
+        tags: project.tags
       }));
   }
 

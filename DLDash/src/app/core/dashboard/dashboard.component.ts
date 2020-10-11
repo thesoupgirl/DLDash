@@ -20,25 +20,29 @@ export class DashboardComponent implements OnInit, OnDestroy {
       title: 'Project 1',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
       photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg'
+        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg',
+        tags: ''
     },
     {
       title: 'Project 2',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
       photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(98).jpg'
+        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(98).jpg',
+        tags: ''
     },
     {
       title: 'Project 3',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
       photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(99).jpg'
+        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(99).jpg',
+        tags: ''
     },
     {
       title: 'Project 4',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
       photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg'
+        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg',
+        tags: ''
     }
   ];
 

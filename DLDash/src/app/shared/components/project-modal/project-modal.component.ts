@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MDBModalRef } from 'angular-bootstrap-md';
 import { Subject } from 'rxjs';
 import { Project } from '../../../projects/models/project.model';
+
 import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-project-modal',
@@ -17,6 +19,7 @@ export class ProjectModalComponent implements OnInit {
   title: string;
   description: string;
   photoUrl: string;
+  tags: string;
 
   projectData: Subject<Project> = new Subject();
   project: Project = {};
