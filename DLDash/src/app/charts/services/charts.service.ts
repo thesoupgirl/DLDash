@@ -56,7 +56,7 @@ export class ChartsService {
           }
         }
 
-        const values = dataset.map( latestRates => latestRates.value).slice(0, 5);
+        const values = dataset.map( latestRates => (Math.round(latestRates.value))%10).slice(0, 5);
         const labels = dataset.map( latestRates => latestRates.currency).slice(0, 5);
 
         return { date, base, values, labels };

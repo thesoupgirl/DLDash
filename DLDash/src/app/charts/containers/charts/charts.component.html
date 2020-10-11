@@ -10,26 +10,7 @@
 </div>
 
 <div *ngIf="!(isLoading$ | async)" class="charts-container p-5">
-
-  <div class="row mb-3">
-    <div class="col-md-12">
-      <mdb-card>
-        <mdb-card-body>
-          <div class="pl-4">
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('USD')">Math</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('PLN')">Science</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('GBP')">Computing</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('JPY')">Art</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('RUB')">Humanities</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('PLN')">Languages</button>
-            <button mdbBtn color="primary" size="sm" (click)="getExchangeRates('RUB')">Personal Development</button>
-          </div>
-          <app-line-chart [dataset]="dataset" [labels]="labels"></app-line-chart>
-        </mdb-card-body>
-      </mdb-card>
-    </div>
-  </div>
-
+  
   <div class="row mb-3">
     <div class="col-md-6">
       <table class="white text-center z-depth-1" mdbTable>
