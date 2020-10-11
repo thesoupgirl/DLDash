@@ -47,7 +47,7 @@ export class ProjectsComponent implements OnInit {
   openAddProjectModal() {
     this.modalRef = this.modalService.show(ProjectModalComponent, this.modalConfig);
 
-    this.modalRef.content.heading = 'Add new in progress learning module';
+    this.modalRef.content.heading = 'Add new future learning module';
 
     this.modalRef.content.projectData.pipe(take(1)).subscribe( (projectData: Project) => {
       this.store.dispatch(new fromProjects.ProjectAdded({ project: projectData }));
@@ -57,7 +57,7 @@ export class ProjectsComponent implements OnInit {
   openEditProjectModal(project: Project) {
     this.modalRef = this.modalService.show(ProjectModalComponent, this.modalConfig);
 
-    this.modalRef.content.heading = 'Edit in progress learning module';
+    this.modalRef.content.heading = 'Edit future learning module';
     const projectCopy = {...project };
     this.modalRef.content.project = projectCopy;
 
