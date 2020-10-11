@@ -9,7 +9,7 @@
     "noImplicitAny": false,
     "noUnusedParameters": false,
     "noUnusedLocals": false,
-    "strictNullChecks": false,
+    "strictNullChecks": false, 
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
