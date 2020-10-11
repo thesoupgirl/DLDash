@@ -15,6 +15,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { CustomersListComponent } from './components/customers-list/customers-list.component';
 
+
 @NgModule({
   declarations: [
     ConfirmModalComponent,

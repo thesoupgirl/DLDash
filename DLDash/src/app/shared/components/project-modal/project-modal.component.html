@@ -18,11 +18,23 @@
         <label for="description">Description</label>
         <mdb-error *ngIf="description && description.invalid && (description.dirty || description.touched)">Description is required</mdb-error>
       </div>
-
       <div class="md-form">
         <input type="text" id="photo" class="form-control" name="photoUrl" [(ngModel)]="project.photoUrl" mdbInput>
         <label for="photo">Photo URL</label>
       </div>
+      <div class="md-form">
+        <textarea type="text" id="tags" class="md-textarea form-control" name="tags" [(ngModel)]="project.tags" mdbInput></textarea>
+        <label for="tags">Tags</label>
+        <!--<tag-input [ngModel]="['@item']"
+          [onlyFromAutocomplete]="true">
+          <tag-input-dropdown [showDropdownIfEmpty]="true"
+            [focusFirstElement]="true"
+            [autocompleteItems]="subjects">
+          </tag-input-dropdown>
+        </tag-input>-->
+        <!--<mdb-error *ngIf="tags && tags.invalid && (tag.dirty || description.touched)">Description is required</mdb-error>-->
+      </div>
+
     </form>
   </div>
   <div class="modal-footer">

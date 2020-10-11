@@ -12,8 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
-
-
 @NgModule({
   imports: [
     CommonModule,
